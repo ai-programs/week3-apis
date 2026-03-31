@@ -2,7 +2,7 @@
 
 This week you're building something new from scratch. No more TypeRacer — it's time to create a **catalogue app** powered by real data from the internet.
 
-You'll connect to an **API** — a service that gives your app access to thousands of entries about Pokémon, superheroes, Dragon Ball characters, countries, or Rick and Morty characters. Your app will fetch this data, display it as beautiful cards, and let users click through to see details.
+You'll connect to an **API** — a service that gives your app access to thousands of entries about Pokémon, superheroes, One Piece characters, countries, or Rick and Morty characters. Your app will fetch this data, display it as beautiful cards, and let users click through to see details.
 
 By the end of today, you'll have something that looks and feels like a real app.
 
@@ -24,19 +24,20 @@ The key idea: **there's an enormous amount of data out there on the internet, cr
 
 Pick one of these APIs. Each one has different data — choose the one that interests you most.
 
-| API | What it has | Explore it |
-|---|---|---|
-| **PokéAPI** | 1000+ Pokémon with stats, types, images | [Open in browser →](https://pokeapi.co/api/v2/pokemon/pikachu) |
-| **Superhero API** | 700+ Marvel & DC heroes with powerstats | [Open in browser →](https://akabab.github.io/superhero-api/api/id/70.json) |
-| **Dragon Ball API** | Dragon Ball characters with transformations | [Open in browser →](https://dragonball-api.com/api/characters/1) |
-| **Rick and Morty** | 800+ characters with species, status, origin | [Open in browser →](https://rickandmortyapi.com/api/character/1) |
-| **REST Countries** | 250 countries with flags, population, capitals | [Open in browser →](https://restcountries.com/v3.1/name/portugal) |
+| API                | What it has                                    | Explore it                                                                 |
+| ------------------ | ---------------------------------------------- | -------------------------------------------------------------------------- |
+| **PokéAPI**        | 1000+ Pokémon with stats, types, images        | [Open in browser →](https://pokeapi.co/api/v2/pokemon/pikachu)             |
+| **Superhero API**  | 700+ Marvel & DC heroes with powerstats        | [Open in browser →](https://akabab.github.io/superhero-api/api/id/70.json) |
+| **One Piece API**  | Characters, devil fruits, crews, sagas         | [Open in browser →](https://api.api-onepiece.com/v2/characters/en/1)       |
+| **Rick and Morty** | 800+ characters with species, status, origin   | [Open in browser →](https://rickandmortyapi.com/api/character/1)           |
+| **REST Countries** | 250 countries with flags, population, capitals | [Open in browser →](https://restcountries.com/v3.1/name/portugal)          |
 
 ### Step 2: Explore the data
 
 **This is the most important step.** Click the link above for your chosen API. You'll see raw data in your browser — this is JSON.
 
 Take a few minutes to look at it. Ask yourself:
+
 - What fields are available? (name, image, stats, description?)
 - What would look cool on a card?
 - What extra information could go on a detail page?
@@ -46,7 +47,7 @@ You'll need to know this to tell Gemini what to build.
 
 ### Step 3: Open the Gemini chat
 
-Look for the **✨ Gemini icon** on the right side of your screen. You know what to do — tell it what you want. Be specific about which API you're using and what data you want to show.
+Look for the **✨ Gemini icon** on the right side of your screen. Tell it what you want to build — the catalogue, the cards, the detail view. Be specific about which API you're using and what data you want to show.
 
 ### Step 4: Build, test, iterate
 
@@ -74,23 +75,23 @@ Once you have the basics working, push it further. Some ideas:
 
 ## 🧠 What You're Learning
 
-| Concept | What it means | Why it matters |
-|---|---|---|
-| **API** | A service that gives your app data | Access to millions of data points created by others |
-| **JSON** | The format APIs use to send data | Understanding it lets you pick exactly what to display |
-| **fetch** | JavaScript's way of requesting data | How your app talks to the internet |
-| **Request → Response** | Your app asks, the API answers | Same model as HTTP from Week 2, but now with external data |
-| **CSS effects** | Hover states, transitions, animations | What makes an app feel polished and professional |
+| Concept                | What it means                         | Why it matters                                             |
+| ---------------------- | ------------------------------------- | ---------------------------------------------------------- |
+| **API**                | A service that gives your app data    | Access to millions of data points created by others        |
+| **JSON**               | The format APIs use to send data      | Understanding it lets you pick exactly what to display     |
+| **fetch**              | JavaScript's way of requesting data   | How your app talks to the internet                         |
+| **Request → Response** | Your app asks, the API answers        | Same model as HTTP from Week 2, but now with external data |
+| **CSS effects**        | Hover states, transitions, animations | What makes an app feel polished and professional           |
 
 ---
 
 ## 📁 Your Files
 
-| File | What's inside |
-|---|---|
+| File         | What's inside                   |
+| ------------ | ------------------------------- |
 | `index.html` | The structure of your catalogue |
-| `style.css` | The visual design |
-| `main.js` | Fetching data + app logic |
+| `style.css`  | The visual design               |
+| `main.js`    | Fetching data + app logic       |
 
 ---
 
@@ -99,26 +100,32 @@ Once you have the basics working, push it further. Some ideas:
 Need the base URLs? Here they are:
 
 **PokéAPI**
+
 - One Pokémon: `https://pokeapi.co/api/v2/pokemon/{name or id}`
 - List: `https://pokeapi.co/api/v2/pokemon?limit=20`
 - Docs: [pokeapi.co/docs/v2](https://pokeapi.co/docs/v2)
 
 **Superhero API**
+
 - One hero: `https://akabab.github.io/superhero-api/api/id/{id}.json`
 - All heroes: `https://akabab.github.io/superhero-api/api/all.json`
 - Docs: [akabab.github.io/superhero-api](https://akabab.github.io/superhero-api/)
 
-**Dragon Ball API**
-- One character: `https://dragonball-api.com/api/characters/{id}`
-- All characters: `https://dragonball-api.com/api/characters`
-- Docs: [web.dragonball-api.com/documentation](https://web.dragonball-api.com/documentation)
+**One Piece API**
+
+- One character: `https://api.api-onepiece.com/v2/characters/en/{id}`
+- All characters: `https://api.api-onepiece.com/v2/characters/en`
+- Devil fruits: `https://api.api-onepiece.com/v2/fruits/en`
+- Docs: [api-onepiece.com/en/documentation](https://api-onepiece.com/en/documentation)
 
 **Rick and Morty API**
+
 - One character: `https://rickandmortyapi.com/api/character/{id}`
 - All characters: `https://rickandmortyapi.com/api/character`
 - Docs: [rickandmortyapi.com/documentation](https://rickandmortyapi.com/documentation)
 
 **REST Countries**
+
 - By name: `https://restcountries.com/v3.1/name/{country}`
 - All countries: `https://restcountries.com/v3.1/all?fields=name,flags,capital,population,region`
 - Docs: [restcountries.com](https://restcountries.com/)
