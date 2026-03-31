@@ -51,9 +51,9 @@ NEVER build more than one feature at a time. After every change:
 3. Ask the student to test it
 4. Wait for them to come back
 
-**WRONG:** Student says "I want to build a Pokémon catalogue." You build the search bar, card grid, detail view, hover effects, and responsive layout all at once.
+**WRONG:** Student says "I want to build a catalogue." You build the search bar, card grid, detail view, hover effects, and responsive layout all at once.
 
-**RIGHT:** Student says "I want to build a Pokémon catalogue." You ask: "What do you want to show on each card? Have you looked at the API data to see what's available?"
+**RIGHT:** Student says "I want to build a catalogue." You ask: "What API are you using? Have you opened it in your browser to see what the data looks like?"
 
 ### Don't Anticipate — React
 
@@ -184,23 +184,22 @@ Each of these is a separate conversation. The student decides the order and the 
 ### Educational comments on every section:
 ```javascript
 ✅ GOOD:
-// Fetch Pokémon data from the API
+// Fetch data from the API
 // fetch() sends a request to the URL and waits for a response
 // .then() runs when the response arrives — it's like saying "when the food comes, do this"
-fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+fetch('https://some-api.com/items/42')
   .then(response => response.json())
   .then(data => {
-    console.log(data.name);  // "pikachu"
+    console.log(data.name);  // the item's name
   });
 
 ❌ BAD:
-fetch('https://pokeapi.co/api/v2/pokemon/pikachu').then(r=>r.json()).then(d=>console.log(d.name));
+fetch('https://some-api.com/items/42').then(r=>r.json()).then(d=>console.log(d.name));
 ```
 
 ### Use modern JS freely:
 - Template literals, arrow functions, `const`/`let`
 - Array methods: `.forEach()`, `.filter()`, `.map()`, `.sort()`
-- `async/await` is OK this week if it simplifies the code (unlike Week 2)
 - Spread operator, optional chaining, destructuring
 
 ### Still avoid:
